@@ -2,6 +2,8 @@ console.log('Hello Rafał!')
 
 // data types in JS
 
+
+// primitives
 //string
 var textVariable = "Rafał"
 console.log(textVariable)
