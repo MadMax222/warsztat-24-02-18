@@ -60,7 +60,20 @@
     function endGame(){
         clearInterval(gameIntervalId)
         mole.remove()
-        alert('Game was ended!\nYour score was: ' + points + '!') // \n-enter
+        
+        document.querySelector('.end-modal .score')
+            .innerText = points + ' punktów!'
+
+        document.querySelector('.end-modal')
+            .style.display = 'block'
+
+        document.querySelector('.end-modal button')
+            .addEventListener(
+                'click',
+                function(){
+                    window.location = ''
+                }
+            )
     }
 
     function flashBackground(){
@@ -75,6 +88,7 @@
         )
     }
     function startGame(){
+        mole = makeMole()
         gameIntervalId = setInterval(
             function(){
                 mole.remove()
@@ -89,21 +103,21 @@
     function init(){
         points = 0
         time = 10
-        mole = makeMole()
+        mole = null
         
         displayPoints(points)
         displayTime(time)
 
-        document.querySelector('.start-modal button') // element o klasie start-modal i znajdz w tym modalu button
+        document.querySelector('.start-modal button') // element o klasie .start-modal i znajdz w tym modalu button
             .addEventListener(
                 'click',
                 function(){
-                    document.querySelector('start-modal')
+                    document.querySelector('.start-modal')
                         .style.display = 'none'
                     startGame()
                 }
             )
-        startGame()
+        
 
 
     }
