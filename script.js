@@ -1,12 +1,12 @@
 
 // function declaration
-function hello(){
-    console.log('Hello')
-    console.log('Hello')
-    console.log('Hello')
+function hello(name){ // paramet is a name 
+    console.log('Hello ' + name + '!')
+    console.log('Hello ' + name + '!')
+    console.log('Hello ' + name + '!')
 }
 
 // function invocation (call)
-hello()
-hello()
-hello()
+hello('Rafał') // passing atribute 'Rafał'
+hello('Ala')
+hello('Ela')
