@@ -7,12 +7,15 @@
     function addPoint(){
         points++
         displayPoints(points)
-             
+        
     }
 
     function reduceTime (){
         time--
         displayTime(time)
+        if(time === 0){
+            endGame()
+        }
     }
 
     function displayPoints(pointsParam){
@@ -51,6 +54,12 @@
         document.querySelector('body').appendChild(mole)
 
         return mole
+    }
+
+    function endGame(){
+        clearInterval(gameIntervalId)
+        mole.remove()
+        alert('Game was ended!\nYour score was: ' + points + '!') // \n-enter
     }
 
     function init(){
