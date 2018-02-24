@@ -1,8 +1,8 @@
 
 // function declaration
-function hello(name, y){ // paramet is a name 
+function hello(name, numerOfLogs){ // paramet is a name 
     
-    for(var i = 0; i < y; i++) {
+    for(var i = 0; i < numerOfLogs; i++) {
     console.log('Hello ' + name + '!')
     }
 }
