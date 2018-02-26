@@ -73,13 +73,13 @@
             .addEventListener(
                 'click',
                 function(){
-                    window.location = ''
+                    window.location = ''  //Reload page
                 }
             )
     }
 
     function flashBackground(){
-        var body = document.querySelector('body')
+        var body = document.querySelector('body') // Future: Add dead mole
 
         body.style.backgroundColor = 'red'
         setTimeout(
