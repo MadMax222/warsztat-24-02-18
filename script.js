@@ -2,7 +2,8 @@
     var points
     var time
     var mole
-    var gameIntervalId
+    var gameIntervalMole
+    var gameIntervalTimer
 
     function addPoint(){
         points++
@@ -58,7 +59,8 @@
     }
 
     function endGame(){
-        clearInterval(gameIntervalId)
+        clearInterval(gameIntervalMole)
+        clearInterval(gameIntervalTimer)
         mole.remove()
         
         document.querySelector('.end-modal .score')
@@ -89,10 +91,16 @@
     }
     function startGame(){
         mole = makeMole()
-        gameIntervalId = setInterval(
+        gameIntervalMole = setInterval(
             function(){
                 mole.remove()
                 mole = makeMole()
+                //reduceTime()
+            },
+            1000
+        )
+        gameIntervalTimer = setInterval(
+            function(){
                 reduceTime()
             },
             1000
