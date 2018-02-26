@@ -95,7 +95,6 @@
             function(){
                 mole.remove()
                 mole = makeMole()
-                //reduceTime()
             },
             1000
         )
