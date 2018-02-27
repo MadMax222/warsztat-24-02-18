@@ -21,11 +21,11 @@
 
     function displayPoints(pointsParam){
         var pointsContainer = document.querySelector('.points')
-        pointsContainer.innerText = 'Punkty: ' + pointsParam
+        pointsContainer.innerText = pointsParam // 'Punkty: ' + pointsParam - so long for mobile
     }
     function displayTime(timeParam){
         var timeContainer = document.querySelector('.time')
-        timeContainer.innerText =  'Czas: ' + timeParam + ' sek.'
+        timeContainer.innerText = timeParam // 'Czas: ' + timeParam + ' sek.' - so long for mobile
     }
 
     function makeMole(){
